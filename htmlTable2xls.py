@@ -7,11 +7,11 @@ import xlwt
 import os
 
 
-def htmlTable2xls(htmlTable_list, svae_file_path, file_name):
+def htmlTable2xls(htmlTable_list, save_file_path, file_name):
     if len(htmlTable_list) > 0:
 
         try:
-            os.makedirs(svae_file_path)
+            os.makedirs(save_file_path)
         except:
             pass
 
@@ -148,4 +148,4 @@ def htmlTable2xls(htmlTable_list, svae_file_path, file_name):
                         worksheet.write_merge(cell_lup[0], cell_rdown[0] - 1,
                                               cell_lup[1], cell_rdown[1] - 1, content)
                         pass
-            workbook.save(svae_file_path + '\\' + file_name)
+            workbook.save(save_file_path + '\\' + file_name)

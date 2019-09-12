@@ -50,14 +50,14 @@ def htmlTable2xls(htmlTable_list, save_file_path, file_name):
                             row_span = 1
                         else:
                             if type(row_now) == list:
-                                row_now = int(''.join(row_now))
-                            row_span = row_now
+                                row_now = ''.join(row_now)
+                            row_span = int(row_now)
                         if not col_now:
                             col_span = 1
                         else:
                             if type(col_now) == list:
-                                col_now = int(''.join(col_now))
-                            col_span = col_now
+                                col_now = ''.join(col_now)
+                            col_span = int(col_now)
                         col += col_span
                         # 处理表格第一行，根据跨行跨列数计算出cell坐标
                         if i == min_tr and j == 1:
